@@ -1,0 +1,523 @@
+/* === GLOBAL STYLE === */
+body {
+  scroll-behavior: smooth;
+  padding-top: 70px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b141b; /* Warna utama gelap */
+  color: #e0e0e0; /* Warna teks terang */
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* === HERO SECTION (FULLSCREEN & DARK) === */
+.hero-section {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("/assets/img/hero-bg.png") center center / cover no-repeat;
+  color: #f1f1f1;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 50px 50px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* === HERO TEXT === */
+.hero-section h1 {
+  color: #fff;
+  font-weight: 700;
+}
+
+.hero-section span.text-warning {
+  color: #ffcc00; /* Kuning cerah */
+}
+
+/* === HERO BUTTON === */
+.hero-section .btn {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+}
+
+.hero-section .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 193, 7, 0.4);
+  background-color: #ffd633;
+}
+
+/* === SECTION UMUM === */
+section {
+  background-color: #2c3542; /* Warna section */
+  border-radius: 12px;
+  color: #ddd;
+  padding: 4rem 1rem;
+  margin-top: 2rem;
+}
+
+/* === SECTION TITLE & TEXT === */
+section h2 {
+  font-weight: 700;
+  color: #ffcc00;
+}
+
+section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+/* === TEAM CARD === */
+.hover-card {
+  transition: all 0.35s ease;
+  background-color: #1f2731;
+  color: #e0e0e0;
+  border: 1px solid #2e3847;
+  border-radius: 14px;
+  overflow: hidden;
+  transform: scale(0.98);
+}
+
+.hover-card img {
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #333;
+}
+
+.hover-card:hover {
+  transform: scale(1);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+.hover-card .card-body {
+  padding: 1.5rem;
+}
+
+.hover-card h5 {
+  color: #ffcc00;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hover-card p {
+  font-size: 0.95rem;
+  color: #bdbdbd;
+}
+
+/* Tombol profil */
+.hover-card .btn {
+  border: 1px solid #ffcc00;
+  color: #ffcc00;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hover-card .btn:hover {
+  background-color: #ffcc00;
+  color: #0b141b;
+  transform: translateY(-2px);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #0b141b;
+  color: #e0e0e0;
+}
+
+footer i {
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  color: #bbb;
+}
+
+footer i:hover {
+  color: #ffcc00;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 75vh;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .hover-card img {
+    height: 200px;
+  }
+}
+
+/* === ukuran CARD home === */
+.service-card {
+  background-color: #2c3542;
+  height: 100%; /* agar card mengikuti tinggi terbesar */
+  display: flex; /* biar fleksibel */
+  flex-direction: column; /* konten vertikal */
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.service-card h4 {
+  margin-bottom: 0.75rem;
+}
+
+.advantage-box {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 14px;
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+.advantage-box:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-4px);
+}
+
+.advantage-icon {
+  font-size: 2rem;
+  color: #f7c04a;
+  margin-bottom: 0.8rem;
+}
+
+/* === bagian foto team === */
+
+.team-photo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.photo-large,
+.photo-small {
+  background-color: #1f2731;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-large:hover,
+.photo-small:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+.photo-large {
+  width: 230px;
+  height: 260px;
+}
+
+.photo-small {
+  width: 120px;
+  height: 160px;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .team-photo-wrapper {
+    gap: 0.75rem;
+  }
+
+  .photo-large {
+    width: 70%;
+    height: 220px;
+  }
+
+  .photo-small {
+    width: 40%;
+    height: 130px;
+  }
+}
+
+/* === ukuran card blog === */
+.blog-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card .card-body {
+  flex: 1;
+}
+
+/* === bagian about === */
+.section-dark {
+  background-color: #1f2731;
+}
+.section-semidark {
+  background-color: #2c3542;
+}
+.rounded-xl {
+  border-radius: 20px;
+}
+.shadow-soft {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+.text-secondary-custom {
+  color: #bfc7d5 !important;
+}
+
+/* ==============================
+   Adinda Profile Page
+============================== */
+.hero-section {
+  background-color: #1f2731;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.gold {
+  color: #b89a67;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.hero-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.hero-role {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.hero-desc {
+  color: #c5c5c5;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  z-index: 2;
+  position: relative;
+}
+
+.image-glow {
+  width: 90%;
+  max-width: 420px;
+  height: 95%;
+  border-radius: 30px;
+  background: radial-gradient(
+    circle at 40% 30%,
+    rgba(255, 255, 255, 0.18),
+    rgba(0, 0, 0, 0)
+  );
+  filter: blur(8px);
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* ==============================
+   PROFILE 
+============================== */
+.profile-section {
+  background: #121212;
+  color: #eaeaea;
+}
+
+.tag-btn {
+  background: #d3a45c;
+  color: #121212;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.profile-card {
+  background: #1b1b1b;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #2a2a2a;
+}
+
+.profile-img-wrapper {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #d3a45c;
+}
+
+.profile-img-round {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-weight: 700;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+
+.profile-role {
+  color: #c7c7c7;
+  margin-bottom: 1.5rem;
+}
+
+.contact-item {
+  background: #262626;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* BIO */
+.bio-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.bio-desc {
+  margin-top: 1rem;
+  color: #c7c7c7;
+  line-height: 1.6;
+}
+
+/* BIRTH BOX */
+.birth-box {
+  background: #1b1b1b;
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.birth-item h3 {
+  font-weight: 700;
+}
+.birth-item p {
+  color: #a7a7a7;
+}
+
+/* SOCIAL STATS */
+.stats-card {
+  background: #1b1b1b;
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.stats-card i {
+  font-size: 2rem;
+  color: #d3a45c;
+}
+
+.stats-card h3 {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .hero-name {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .hero-text {
+    text-align: center !important;
+  }
+  .birth-box {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* ================= SKILL SECTION ================= */
+.skill-section {
+  background-color: #1f2731;
+  border-radius: 16px;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  background-color: #2c3542;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card i {
+  font-size: 2.2rem;
+  color: #b89a67;
+  margin-bottom: 10px;
+}
+
+.skill-card h4 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #f5b400; /* warna kuning */
+}
+
+
+.skill-card p {
+  color: #bfc2c7;
+  font-size: 0.9rem;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* bagian blog detail */
+.blog-img {
+  width: 100%;
+  height: 300px; /* Tinggi seragam */
+  object-fit: cover; /* Foto tetap proporsional */
+  object-position: center;
+}
