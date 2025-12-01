@@ -3,7 +3,7 @@
 
 <style>
 body {
-  background: #0f172a;
+  background: #151d31ff;
   color: #e2e8f0;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
